@@ -19,15 +19,18 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
+    "@hocuspocus/provider": "^2.13.5",
     "@liveblocks/client": "^0.17.7",
     "@liveblocks/react": "^0.17.7",
     "@tldraw/core": "*",
     "@tldraw/tldraw": "*",
+    "@uidotdev/usehooks": "^2.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "vite-tsconfig-paths": "^3.5.0"
+    "vite-tsconfig-paths": "^3.5.0",
+    "yjs": "^13.6.18"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
