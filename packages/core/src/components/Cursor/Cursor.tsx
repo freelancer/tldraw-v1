@@ -3,8 +3,9 @@ import type { TLUser } from '~types'
 
 export type CursorComponent<T = any> = (props: Pick<TLUser<T>, 'id' | 'color' | 'metadata'>) => any
 
-export const Cursor: CursorComponent = React.memo(({ color }) => {
-  return (
+export const Cursor: CursorComponent = React.memo(({ color, metadata }) => {
+  const name = metadata?.name || 'Anonymous'
+  return (<>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" fill="none" fillRule="evenodd">
       <g fill="rgba(0,0,0,.2)" transform="translate(1,1)">
         <path d="m12 24.4219v-16.015l11.591 11.619h-6.781l-.411.124z" />
@@ -19,5 +20,15 @@ export const Cursor: CursorComponent = React.memo(({ color }) => {
         <path d="m13 10.814v11.188l2.969-2.866.428-.139h4.768z" />
       </g>
     </svg>
+    <div
+    style={{
+      color: color,
+      opacity: 0.8,
+      fontSize: 10,
+      whiteSpace: 'nowrap',
+      padding: '2px 4px',
+    }}
+    >{name}</div>
+    </>
   )
 })
