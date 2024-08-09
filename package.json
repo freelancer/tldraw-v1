@@ -36,8 +36,6 @@
     "format": "prettier --write .",
     "lint": "turbo run lint --parallel",
     "clean": "turbo run clean",
-    "postinstall": "husky install",
-    "pre-commit": "lint-staged",
     "pre-push": "yarn test"
   },
   "devDependencies": {
@@ -52,7 +50,6 @@
     "eslint": "^8.20.0",
     "eslint-plugin-jest": "^26.8.2",
     "fake-indexeddb": "^3.1.7",
-    "husky": "^7.0.4",
     "init-package-json": "^2.0.5",
     "jest": "^27.4.7",
     "lint-staged": "^12.3.3",
