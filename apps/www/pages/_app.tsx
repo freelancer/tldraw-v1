@@ -1,4 +1,3 @@
-import '@fontsource/recursive'
 import Head from 'next/head'
 import type React from 'react'
 import { MaintenanceMode } from '~components/MaintenanceMode'

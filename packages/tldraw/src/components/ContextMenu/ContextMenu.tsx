@@ -87,9 +87,9 @@ const InnerMenu = React.memo(function InnerMenu() {
     app.toggleLocked()
   }, [app])
 
-  const handleGroup = React.useCallback(() => {
-    app.group()
-  }, [app])
+  // const handleGroup = React.useCallback(() => {
+  //   app.group()
+  // }, [app])
 
   const handleMoveToBack = React.useCallback(() => {
     app.moveToBack()
@@ -180,10 +180,11 @@ const InnerMenu = React.memo(function InnerMenu() {
           <CMRowButton onClick={handleFlipVertical} kbd="⇧V" id="TD-ContextMenu-Flip_Vertical">
             <FormattedMessage id="flip.vertical" />
           </CMRowButton>
-          <CMRowButton onClick={handleLock} kbd="#⇧L" id="TD-ContextMenu- Lock_Unlock">
+          {/* <CMRowButton onClick={handleLock} kbd="#⇧L" id="TD-ContextMenu- Lock_Unlock">
             <FormattedMessage id="lock" /> / <FormattedMessage id="unlock" />
-          </CMRowButton>
-          {(hasTwoOrMore || hasGroupSelected) && <Divider />}
+          </CMRowButton> */}
+          {/* TODO Groups are not stable with multiplayer - disabling them to prevent infinite loops. */}
+          {/* {(hasTwoOrMore || hasGroupSelected) && <Divider />}
           {hasTwoOrMore && (
             <CMRowButton onClick={handleGroup} kbd="#G" id="TD-ContextMenu-Group">
               <FormattedMessage id="group" />
@@ -194,7 +195,7 @@ const InnerMenu = React.memo(function InnerMenu() {
               <FormattedMessage id="ungroup" />
             </CMRowButton>
           )}
-          <Divider />
+          <Divider /> */}
           <ContextMenuSubMenu label={intl.formatMessage({ id: 'move' })} id="TD-ContextMenu-Move">
             <CMRowButton onClick={handleMoveToFront} kbd="⇧]" id="TD-ContextMenu-Move-To_Front">
               <FormattedMessage id="to.front" />

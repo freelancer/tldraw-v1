@@ -565,15 +565,15 @@ export function useKeyboardShortcuts(ref: React.RefObject<HTMLDivElement>) {
     [app]
   )
 
-  useHotkeys(
-    '⌘+shift+l,ctrl+shift+l',
-    () => {
-      if (!canHandleEvent()) return
-      app.toggleLocked()
-    },
-    undefined,
-    [app]
-  )
+  // useHotkeys(
+  //   '⌘+shift+l,ctrl+shift+l',
+  //   () => {
+  //     if (!canHandleEvent()) return
+  //     app.toggleLocked()
+  //   },
+  //   undefined,
+  //   [app]
+  // )
 
   // Copy, Cut & Paste
 
@@ -622,17 +622,17 @@ export function useKeyboardShortcuts(ref: React.RefObject<HTMLDivElement>) {
 
   // Group & Ungroup
 
-  useHotkeys(
-    '⌘+g,ctrl+g',
-    (e) => {
-      if (!canHandleEvent()) return
+  // useHotkeys(
+  //   '⌘+g,ctrl+g',
+  //   (e) => {
+  //     if (!canHandleEvent()) return
 
-      app.group()
-      e.preventDefault()
-    },
-    undefined,
-    [app]
-  )
+  //     app.group()
+  //     e.preventDefault()
+  //   },
+  //   undefined,
+  //   [app]
+  // )
 
   useHotkeys(
     '⌘+shift+g,ctrl+shift+g',
